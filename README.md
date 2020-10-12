@@ -4,9 +4,9 @@ This project will deal with the visualization of earthquake data, which involves
 
 Requirements to pass: Before the deadline, hand in visualizations from which it should be possible to answer the following questions about the dataset:
 
-- Which are the earthquakes that occured in Italy over the last 365 days?
+- Which are the earthquakes that occured in Italy over the last 365 days (from the time you downloaded the data)?
 - Which are the 4+ magnitude earthquakes from the same period?
-- What is the magnitude of each quake being shown?
+- What is the magnitude of each quake?
 - Where on the surface (in 2D) is each quake located/projected?
 - Where in the volume of the data (in 3D) are quakes most likely to occur?
 
