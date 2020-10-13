@@ -1,6 +1,6 @@
 # Project
 
-This project will deal with the visualization of earthquake data, which involves spatial and temporal events recorded from sensors around Italy. You can find further background on the dataset in the [instructions](ProjectHT2016.pdf) from previous years of this course.
+This project will deal with the visualization of earthquake data, which involves spatial and temporal events recorded from sensors around Italy. You can find further background on the dataset in the [instructions](project.pdf) from previous years of this course.
 
 Requirements to pass: Before the deadline, hand in visualizations from which it should be possible to answer the following questions about the dataset:
 
