@@ -6,9 +6,9 @@ import numpy as np
 import vtk
 from vtk.util import numpy_support
 
-def readPoints(file, depth_scaling=0.01, time_shift=-1467247524):
+def readPoints(file, sep="|", depth_scaling=0.01, time_shift=-1467247524):
 
-    df=pd.read_csv("data_365days.txt",sep="|")
+    df=pd.read_csv(file,sep=sep)
     df["Magnitude"].isna().values.any()
 
     df[['Latitude', 'Longitude']]=df[['Latitude', 'Longitude']].clip(lower=0,upper=360)
