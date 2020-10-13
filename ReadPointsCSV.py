@@ -26,7 +26,7 @@ def readPoints(file, depth_scaling=0.01):
 
     # Open the file
     file = open(file)
-    
+
     # Read one line
     line = file.readline()
 
@@ -39,7 +39,6 @@ def readPoints(file, depth_scaling=0.01):
         if data and data[0][0] != '#':
             # Convert data into float
             print(data[0], data[1], data[2], data[3], data[4].split('--')[0], data[10])
-
             date, x, y, z, r = data[1], float(data[2]), float(data[3]),  float(data[4]), float(data[10])
             z_scaled = z * depth_scaling
             row=date.split('T')
@@ -51,7 +50,6 @@ def readPoints(file, depth_scaling=0.01):
             if atime[2]=='':
                 atime[2]='00'
             t= time.mktime((int(adate[0]),int(adate[1]),int(adate[2]),int(atime[0]),int(atime[1]),int(atime[2]),0,0,0))
-            
             if x > LatMax:
                 LatMax=x
             if x< LatMin:
@@ -62,7 +60,7 @@ def readPoints(file, depth_scaling=0.01):
                 LonMin=y
             if t< tMin:
                  tMin=t
-            
+
             # Insert floats into the point array
             points.InsertNextPoint(x, y, z_scaled)
             scalars.InsertNextValue(r)
@@ -72,7 +70,6 @@ def readPoints(file, depth_scaling=0.01):
 
         # read next line
         line = file.readline()
-        
     print(LatMin, LatMax, LonMin, LonMax)
 
     return points, scalars, tid, depth
