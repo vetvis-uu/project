@@ -9,14 +9,14 @@ from vtk.util import numpy_support
 def readPoints(file, sep="|", depth_scaling=0.01, time_shift=-1467247524):
 
     df=pd.read_csv(file,sep=sep)
-    df["Magnitude"].isna().values.any()
+    #df["Magnitude"].isna().values.any()
 
     df[['Latitude', 'Longitude']]=df[['Latitude', 'Longitude']].clip(lower=0,upper=360)
     df['NewDepth']=df['Depth/Km']*depth_scaling
     df["NewTime"]= pd.to_datetime(df['Time']).values.astype(np.int64) // 10 ** 6
 
     points=df[['Latitude', 'Longitude', 'NewDepth']].to_numpy()
-    times=df["NewTime"].to_numpy()+t_shift
+    times=df["NewTime"].to_numpy()+time_shift
     scalars=df["Magnitude"].to_numpy()
     depth=df["NewDepth"].to_numpy()
 
