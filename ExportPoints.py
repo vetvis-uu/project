@@ -9,6 +9,8 @@ os.chdir(datapath)
 # This should allow modules to be imported correctly in the ParaView shell
 sys.path.append(datapath)
 from ReadPointsCSV import readPoints
+#if using python 3 uncomment line below and comment line above
+#from ReadPoints3 import readPoints
 
 # Read the data in CSV format
 filename = "data_90days.txt"
